@@ -1,0 +1,217 @@
+body{
+    padding: 0; /*0 does not need */
+    margin: 0;
+    font-family: Helvetica;
+}
+
+/*Header*/
+#header{
+    position: fixed; /*Fixed at the top*/
+    top: 0px; /*where the header is fixed*/
+    left: 0px; /*if you don't specify px is displays below the image*/
+    z-index: 500; 
+    /*Header will be top most, overlay itself above other elements, 
+    bring to front*/
+    width: 100%;
+    height: 80px;
+    background-image: url('images/wood-bg.png');
+    background-repeat: repeat-x;
+    /*THe image is small so it repeaes horizontally till it 
+    reaches the width of the page*/
+}
+
+#header img{
+    display:block;
+    margin: auto; /*auto: centralize an object in screen, within its 
+    parent. The header.*/
+    height: 70%;
+    padding-top: 15p;
+}
+
+/*we need the below to display the header links below the fixed menu*/
+#tabs-top{
+position: fixed;
+top: 80px; /*We want it below the header, so from the height*/
+left: 0px;
+z-index: 500;
+width: 100%;
+height: 40px;
+background-color: darkgreen;
+}
+
+/*Hyperlinks*/
+#tabs-top a{/*# to specify id*/
+    float:left;
+    display:block;
+    width:33%;
+    height:35px;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+    text-decoration: none;/*remove underlines*/
+    padding-top: 12px; /*text within hyperlink to be vertically aligned*/
+}
+
+/*Main-home*/
+#main-home{
+    margin-top: 120px;/*leave space of 120px frm top of screen to the main
+    home, this moves the map to start from below buttons. 80 + 40 =120px*/
+}
+
+#tabs-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 40px;
+    background-color: forestgreen;
+}
+
+#tabs-bottom a {
+    float: left;
+    display: block;
+    width: 50%;
+    height: 35px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+}
+
+/*Animal Page*/
+#main{
+    margin-top: 119px;
+    background: url('images/map-blur.png');
+    background-repeat: repeat-y;  /*repeats vertically*/
+    background-size: cover; /*added myself*/
+}
+
+#content{
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+/*Info Box*/
+/*Selector, any hyperlink with info-box*/
+/*Class is a dot .*/
+a.info-box{
+    text-decoration: none;
+    background: rgba(255,255,255,.8);/*White transparent*/
+    /*The first 3 is color and the .8 is transparency 20% transparent*/
+    width: 90%;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;/*spacing between boxes*/
+    padding: 1px;/*All around*/
+}
+
+/*Page links contents*/
+.info-box img{
+    height: 70px;
+    margin: 10px;
+    float: left;
+}
+
+.info-box h3{
+    padding: 0;
+    margin-bottom: 0;
+    width: 90%;
+    color: #572800;
+}
+
+.info-box p{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: #131313;
+}
+
+/*Any image that has a class right and appears in info-box*/
+.info-box img.right{
+    float: right;
+    margin-top: 25px;
+    height: 40px;
+}
+
+/*Animals Bio Pages - Info box full*/
+#info-box-full{
+    background-color: rgba(255,255,255,.8);
+    width: 90%;
+    display: block;
+    margin: auto; /*centers to screen*/
+    margin-top: 12px;
+    padding: 10px;
+}
+
+#info-box-full img{
+    width: 100%;
+}
+
+#info-box-full h3{
+    text-align: center;
+}
+/*
+#info-box-full p{
+    text-align: center;
+}
+
+#info-box-full li{
+    text-align: center;
+}*/
+
+#info-box-full ul{
+    list-style-type: none;/*Removes the bullets*/
+}
+
+/*Weather Lesson 19*/
+img.info-box-weather-icon{
+    height: 30px;
+    width: 30px !important; /*Override everything else*/
+    margin: 10px;
+    float: center;
+}
+
+h1.info-box-weather-icon{
+    font-size: 65px;
+    font-weight: 200;
+    padding:0;
+    margin:0;
+}
+
+table{
+    width:100%;
+}
+
+td{
+    border-top:1px solid #131313;
+}
+
+/*Feedback styling*/
+input{
+    width: 100%;
+    height:25px;
+    margin: 12px 0;/*2 values, shorthand 12px top and bottom and 0 left and right*/
+    border: 1px solid #929292;
+}
+
+textarea{
+    width: 100%;
+    height:25px;
+    margin: 12px 0;
+    border: 1px solid #929292;
+}
+
+.button{
+    display: block;
+    background-color: forestgreen;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0;
+    padding: 8px 0;
+}
